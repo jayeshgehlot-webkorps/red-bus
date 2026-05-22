@@ -308,8 +308,38 @@ npm run dev
 ---
 
 ## 📸 10. Screenshots
+Login 
+<img width="1920" height="812" alt="image" src="https://github.com/user-attachments/assets/7617cda7-8601-4ae8-b29d-91acb22f8195" />
 
-<img width="1898" height="1080" alt="image" src="https://github.com/user-attachments/assets/bda26cd4-1cfe-40da-9d84-6bd5e4f0f172" />
+Home page
+<img width="1892" height="1080" alt="image" src="https://github.com/user-attachments/assets/d081536f-2af0-4751-bcb9-e5482fd3642b" />
+
+My Bookings 
+<img width="1901" height="1080" alt="image" src="https://github.com/user-attachments/assets/a2095bbc-83f9-4f1d-8dc2-86bc8e1441b0" />
+
+Add New Bus
+<img width="1893" height="1080" alt="image" src="https://github.com/user-attachments/assets/e2676488-8ac2-46b1-a676-2702b2e38733" />
+
+Remove Bus
+<img width="1898" height="1080" alt="image" src="https://github.com/user-attachments/assets/585f82d3-23f3-4785-8b81-4c49706346f6" />
+
+Make Admin
+<img width="1897" height="847" alt="image" src="https://github.com/user-attachments/assets/194e750e-941a-4b86-8c95-51e66a9fbfd4" />
+
+Remove Admin
+<img width="1901" height="790" alt="image" src="https://github.com/user-attachments/assets/fb67d224-0c53-453c-a1c3-dea09af9f383" />
+
+Selecting Bus
+<img width="1920" height="802" alt="image" src="https://github.com/user-attachments/assets/2fa18e5a-9fa0-43f4-a80b-2bb5f381adaa" />
+
+Payment Page
+<img width="1920" height="785" alt="image" src="https://github.com/user-attachments/assets/4b1df0fa-2d3f-4556-83ce-0929f2413cb3" />
+
+Payment Gateway (Razor Pay)
+<img width="1920" height="864" alt="image" src="https://github.com/user-attachments/assets/f8960d68-c6e6-489b-8aa0-38875a3b7e36" />
+
+Successfull Payment
+<img width="1920" height="835" alt="image" src="https://github.com/user-attachments/assets/a9cd92ef-b103-427d-bad6-2cee44cd91c2" />
 
 ---
 
