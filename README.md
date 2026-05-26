@@ -81,8 +81,8 @@ npm run dev
 5. Filtered bus list is returned to frontend  
 6. User views available buses with details  
 
----
 <img width="1892" height="1080" alt="image" src="https://github.com/user-attachments/assets/d081536f-2af0-4751-bcb9-e5482fd3642b" />
+---
 
 ### 💺 Seat Selection (Flow)
 
