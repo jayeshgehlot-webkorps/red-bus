@@ -30,7 +30,6 @@ app.use(async (req, res, next) => {
 app.get("/", (req, res) => {
     res.send("done");
 })
-
 app.use("/auth", authRouter);
 app.use("/api/booking", bookingRouter);
 app.use("/api/bus", busRouter);
