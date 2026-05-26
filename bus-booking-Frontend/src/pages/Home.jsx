@@ -4,13 +4,14 @@ import Allbuses from '../components/Allbuses'
 import { useDispatch } from 'react-redux'
 import { setBuses } from '../redux/slices/busSlice'
 import axios from "axios"
+
 const Home = () => {
   const dispatch = useDispatch();
-
+  const API = import.meta.env.VITE_API_URL;
   async function busesFetch() {
     try {
 
-      const bus = await axios.get("http://localhost:3000/api/bus/buses")
+      const bus = await axios.get(`${API}api/bus/buses`)
       if (bus.data) {
         dispatch(setBuses(bus.data.allbus));
       }

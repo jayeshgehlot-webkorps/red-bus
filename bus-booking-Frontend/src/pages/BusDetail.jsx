@@ -8,6 +8,7 @@ import { selectedSeats } from '../redux/slices/bookingSlice';
 const BusDetail = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
+     const API = import.meta.env.VITE_API_URL;
     const selectedbus = useSelector((state) => state.bus.selectedBus);
     const selectseat = useSelector((state) => state.booking.selectedSeats);
     const [loading, setloading] = useState(false);
@@ -18,7 +19,7 @@ const BusDetail = () => {
             const fetchBusData = async () => {
                 setloading(true);
                 try {
-                    const response = await axios.get("http://localhost:3000/api/bus/buses", {
+                    const response = await axios.get(`${API}api/bus/buses`, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`
                         }

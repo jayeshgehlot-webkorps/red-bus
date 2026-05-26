@@ -12,7 +12,7 @@ const Register = () => {
     const [eye, seteye] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
+    const API = import.meta.env.VITE_API_URL;
     const {
         register,
         handleSubmit,
@@ -24,7 +24,7 @@ const Register = () => {
         if (isLogin) {
             try {
                 const login = async () => {
-                    const user = await axios.post("http://localhost:3000/auth/login", {
+                    const user = await axios.post(`${API}auth/login`, {
                         email: data.email,
                         password: data.password
                     });
@@ -44,7 +44,8 @@ const Register = () => {
         }
         else {
             try {
-                const user = await axios.post("http://localhost:3000/auth/register", {
+                console.log(API)
+                const user = await axios.post(`${API}auth/register`, {
                     name: data.name,
                     email: data.email,
                     password: data.password,

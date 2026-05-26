@@ -6,10 +6,11 @@ import html2canvas from 'html2canvas';
 
 const BusDetails = ({ id }) => {
     const [booking, setbooking] = useState(null);
+     const API = import.meta.env.VITE_API_URL;
     useEffect(() => {
         const fetch = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/bus/byid/${id}`, {
+                const response = await axios.get(`${API}api/bus/byid/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
                     }
@@ -67,7 +68,7 @@ const Mybookings = () => {
     const user = useSelector((state) => state.auth.user);
     const [bookings, setBookings] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    const API = import.meta.env.VITE_API_URL;
     const downloadTicket = async (bookingId) => {
         const element = document.getElementById(`ticket-${bookingId}`);
 
@@ -86,13 +87,13 @@ const Mybookings = () => {
                         const style = window.getComputedStyle(el);
 
                         if (style.backgroundColor.includes('oklch')) {
-                            el.style.backgroundColor = "#f8fafc"; 
+                            el.style.backgroundColor = "#f8fafc";
                         }
                         if (style.color.includes('oklch')) {
-                            el.style.color = "#1e293b"; 
+                            el.style.color = "#1e293b";
                         }
                         if (style.borderColor.includes('oklch')) {
-                            el.style.borderColor = "#e2e8f0"; 
+                            el.style.borderColor = "#e2e8f0";
                         }
 
                         Array.from(el.children).forEach(cleanStyles);
@@ -123,12 +124,11 @@ const Mybookings = () => {
 
     const cancel = async (id) => {
         try {
-            await axios.delete(`http://localhost:3000/api/booking/cancel/${id}`, {
+            await axios.delete(`${API}api/booking/cancel/${id}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
             });
-            // setBookings((prev) => prev.filter((b) => b._id !== id));
         } catch (err) {
             console.error("Cancellation failed", err);
         }
@@ -137,7 +137,7 @@ const Mybookings = () => {
     useEffect(() => {
         async function fetch() {
             try {
-                let responsebook = await axios.get("http://localhost:3000/api/booking/mybookings", {
+                let responsebook = await axios.get(`${API}api/booking/mybookings`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
                     }
@@ -179,7 +179,7 @@ const Mybookings = () => {
                             </div>
                             <div className="text-right">
                                 <p className="text-[10px] font-bold text-slate-400 uppercase">Status</p>
-                                {(booking.isCancel)?<p className="text-xs font-bold text-yellow-600">CANCEL</p>:<p className="text-xs font-bold text-green-600">CONFIRMED</p>}
+                                {(booking.isCancel) ? <p className="text-xs font-bold text-yellow-600">CANCEL</p> : <p className="text-xs font-bold text-green-600">CONFIRMED</p>}
                                 {/* <p className="text-xs font-bold text-green-600">{CONFIRMED}</p> */}
                             </div>
                         </div>
@@ -210,8 +210,8 @@ const Mybookings = () => {
                                     </div>
                                 </div>
 
-                                {!(booking.isCancel)?<div className="flex flex-col sm:flex-row gap-3 no-print">
-                                    <button 
+                                {!(booking.isCancel) ? <div className="flex flex-col sm:flex-row gap-3 no-print">
+                                    <button
                                         onClick={() => downloadTicket(booking._id)}
                                         className="flex-1 bg-[#007EA7] text-white py-2 rounded-lg text-xs font-bold shadow-md hover:bg-[#005F7D] transition-all cursor-pointer active:scale-95"
                                     >
@@ -223,7 +223,7 @@ const Mybookings = () => {
                                     >
                                         Request Cancellation
                                     </button>
-                                </div>:null }
+                                </div> : null}
                             </div>
                         </div>
                     </div>
