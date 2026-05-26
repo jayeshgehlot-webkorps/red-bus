@@ -14,7 +14,7 @@ const Paymentinfo = () => {
     const navigate = useNavigate();
     const selectedSeats = useSelector((state) => state.booking.selectedSeats);
     const selectedbus = useSelector((state) => state.bus.selectedBus);
-
+     const API = import.meta.env.VITE_API_URL;
     const [isLoading, setIsLoading] = useState(false);
     const [isPaid, setIsPaid] = useState(false);
     const [fetchingBus, setFetchingBus] = useState(false);
@@ -26,7 +26,7 @@ const Paymentinfo = () => {
             const reFetchBus = async () => {
                 setFetchingBus(true);
                 try {
-                    const response = await axios.get("http://localhost:3000/api/bus/buses", {
+                    const response = await axios.get(`${API}api/bus/buses`, {
                         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
                     });
                     const busmatch = response.data.allbus.find((e) => e._id === id);
@@ -58,7 +58,7 @@ const Paymentinfo = () => {
 
         try {
             const { data } = await axios.post(
-                "http://localhost:3000/api/payment/create-order",
+                `${API}api/payment/create-order`,
                 { amount: computedTotalAmount },
                 {
                     headers: {
@@ -78,7 +78,7 @@ const Paymentinfo = () => {
                 handler: async function (response) {
                     try {
                         const verifyRes = await axios.post(
-                            "http://localhost:3000/api/payment/verify-payment",
+                            `${API}api/payment/verify-payment`,
                             response,
                             {
                                 headers: {
@@ -89,7 +89,7 @@ const Paymentinfo = () => {
 
                         if (verifyRes.data.success) {
                             await axios.post(
-                                "http://localhost:3000/api/booking/add",
+                                `${API}api/booking/add`,
                                 {
                                     busId: selectedbus._id,
                                     selectedSeats: selectedSeats,
@@ -122,7 +122,6 @@ const Paymentinfo = () => {
                 },
                 modal: {
                     ondismiss: function () {
-                        // toast.error("Payment cancelled ❌");
                         setpyLoaderData("Payment cancelled ❌");
                         setTimeout(() => {
                             setIsProcessing(false);
@@ -140,13 +139,11 @@ const Paymentinfo = () => {
             });
 
             rzp.open();
-            // setIsProcessing(false);
 
         } catch (error) {
             console.error("Order Generation Failure:", error);
             toast.error("Could not initialize transaction gateway. Try again.");
         } finally {
-            // setIsLoading(false);
         }
     };
 

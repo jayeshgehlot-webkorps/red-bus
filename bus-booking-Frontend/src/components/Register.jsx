@@ -58,7 +58,6 @@ const Register = () => {
                 navigate("/");
             } catch (er) {
                 toast.error(er.response.data.message)
-                // alert(er.response.data.message);
             }
 
         }
