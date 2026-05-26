@@ -46,12 +46,10 @@ const updatebus = async (req, res) => {
     await buss.save();
     res.send("bus-updated ");
 }
-
 const buses = async (req, res) => {
     const allbus = await bus.find({});
     res.send({ allbus });
 }
-
 const busByid = async (req, res) => {
     try {
         const bid = req.params.id;
@@ -61,7 +59,6 @@ const busByid = async (req, res) => {
         res.status(401).send("error in bus by id");
     }
 }
-
 module.exports = {
     addbus, updatebus, deletebus, buses, busByid
 }

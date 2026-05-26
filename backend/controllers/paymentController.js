@@ -3,7 +3,6 @@ const crypto = require("crypto");
 
 const createPayment = async (req, res) => {
     try {
-        console.log("Creating Order for Amount:", req.body.amount);
         const options = {
             amount: Math.round(Number(req.body.amount) * 100),
             currency: "INR",
@@ -29,7 +28,7 @@ const verifyPayment = async (req, res) => {
             razorpay_signature,
         } = req.body;
 
-        
+
         const body = razorpay_order_id + "|" + razorpay_payment_id;
         const expectedSignature = crypto
             .createHmac("sha256", process.env.RAZOR_KEY_SECRET)

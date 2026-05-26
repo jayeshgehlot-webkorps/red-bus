@@ -18,7 +18,9 @@ app.use(cors({
 }))
 
 app.use(express.json());
-
+app.get("/", (req, res) => {
+    res.send("done");
+})
 
 app.use("/auth", authRouter);
 app.use("/api/booking", bookingRouter);
