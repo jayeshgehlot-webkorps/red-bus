@@ -18,15 +18,15 @@ app.use(cors({
 }))
 console.log("outside")
 app.use(express.json());
-// app.use(async (req, res, next) => {
-//     try {
-//         console.log(process.env.API_DB);
-//         await connectDB();   
-//         next();
-//     } catch (err) {
-//         res.status(500).json({ error: "DB connection failed" });
-//     }
-// });
+app.use(async (req, res, next) => {
+    try {
+        console.log(process.env.API_DB);
+        await connectDB();   
+        next();
+    } catch (err) {
+        res.status(500).json({ error: "DB connection failed" });
+    }
+});
 app.get("/", (req, res) => {
     res.send("done");
 })
