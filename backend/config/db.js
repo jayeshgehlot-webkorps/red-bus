@@ -10,7 +10,7 @@ const connectDB = mongoose.connect(process.env.API_DB)
     .catch((er) => {
         console.log(er);
     });
-module.exports = db;
+module.exports = connectDB;
 
 // const mongoose = require("mongoose");
 
