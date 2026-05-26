@@ -83,7 +83,6 @@ npm run dev
 
 ---
 <img width="1892" height="1080" alt="image" src="https://github.com/user-attachments/assets/d081536f-2af0-4751-bcb9-e5482fd3642b" />
----
 
 ### 💺 Seat Selection (Flow)
 
@@ -92,7 +91,9 @@ npm run dev
 3. User selects multiple available seats  
 4. Selected seats are stored in frontend state  
 5. Already booked seats are disabled to prevent selection  
-6. Selected seat data is sent to backend during booking  
+6. Selected seat data is sent to backend during booking
+
+   <img width="1920" height="802" alt="image" src="https://github.com/user-attachments/assets/2fa18e5a-9fa0-43f4-a80b-2bb5f381adaa" />
 
 ---
 
@@ -134,6 +135,7 @@ npm run dev
 6. Frontend shows success screen with booked seat details  
 
 ---
+<img width="1920" height="835" alt="image" src="https://github.com/user-attachments/assets/a9cd92ef-b103-427d-bad6-2cee44cd91c2" />
 
 ### 📄 My Bookings (Flow)
 
@@ -331,8 +333,6 @@ Make Admin
 Remove Admin
 <img width="1901" height="790" alt="image" src="https://github.com/user-attachments/assets/fb67d224-0c53-453c-a1c3-dea09af9f383" />
 
-Selecting Bus
-<img width="1920" height="802" alt="image" src="https://github.com/user-attachments/assets/2fa18e5a-9fa0-43f4-a80b-2bb5f381adaa" />
 
 Payment Page
 <img width="1920" height="785" alt="image" src="https://github.com/user-attachments/assets/4b1df0fa-2d3f-4556-83ce-0929f2413cb3" />
@@ -340,8 +340,6 @@ Payment Page
 Payment Gateway (Razor Pay)
 <img width="1920" height="864" alt="image" src="https://github.com/user-attachments/assets/f8960d68-c6e6-489b-8aa0-38875a3b7e36" />
 
-Successfull Payment
-<img width="1920" height="835" alt="image" src="https://github.com/user-attachments/assets/a9cd92ef-b103-427d-bad6-2cee44cd91c2" />
 
 ---
 
