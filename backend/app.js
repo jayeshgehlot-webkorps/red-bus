@@ -1,3 +1,4 @@
+const connectDB = require("./config/db");
 require("dotenv").config();
 const express = require("express");
 const app = express();
@@ -10,14 +11,22 @@ const busRouter = require("./routes/busRoutes.js");
 const adminRouter = require("./routes/adminRoutes.js");
 const paymentRouter = require("./routes/paymentRoute.js");
 
-
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:3000"],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
-
+console.log("outside")
 app.use(express.json());
+app.use(async (req, res, next) => {
+    try {
+        console.log(process.env.API_DB)
+        await connectDB();   
+        next();
+    } catch (err) {
+        res.status(500).json({ error: "DB connection failed" });
+    }
+});
 app.get("/", (req, res) => {
     res.send("done");
 })
