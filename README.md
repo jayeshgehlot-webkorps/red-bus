@@ -123,6 +123,8 @@ npm run dev
 12. If user cancels payment:
     * Payment process is stopped
     * User remains on the same page with cancel message
+      
+<img width="1920" height="864" alt="image" src="https://github.com/user-attachments/assets/f8960d68-c6e6-489b-8aa0-38875a3b7e36" />
 
 ---
 
@@ -135,8 +137,9 @@ npm run dev
 5. Backend responds with booking confirmation  
 6. Frontend shows success screen with booked seat details  
 
----
 <img width="1920" height="835" alt="image" src="https://github.com/user-attachments/assets/a9cd92ef-b103-427d-bad6-2cee44cd91c2" />
+
+---
 
 ### 📄 My Bookings (Flow)
 
@@ -337,9 +340,6 @@ Remove Admin
 
 Payment Page
 <img width="1920" height="785" alt="image" src="https://github.com/user-attachments/assets/4b1df0fa-2d3f-4556-83ce-0929f2413cb3" />
-
-Payment Gateway (Razor Pay)
-<img width="1920" height="864" alt="image" src="https://github.com/user-attachments/assets/f8960d68-c6e6-489b-8aa0-38875a3b7e36" />
 
 
 ---
