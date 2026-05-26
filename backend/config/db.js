@@ -2,8 +2,19 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const connectDB = () =>  {
-    mongoose.connect(process.env.API_DB)
+// const connectDB = () =>  {
+//     mongoose.connect(process.env.API_DB)
+//     .then(() => {
+//         console.log("db connected ");
+//         return;
+//     })
+//     .catch((er) => {
+//         console.log(er);
+//         return;
+//     });
+// }
+
+const connectDB = mongoose.connect(process.env.API_DB)
     .then(() => {
         console.log("db connected ");
         return;
@@ -12,10 +23,9 @@ const connectDB = () =>  {
         console.log(er);
         return;
     });
-}
+
 module.exports = connectDB;
 
-// const mongoose = require("mongoose");
 
 // let isConnected = false;
 
