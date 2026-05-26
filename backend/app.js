@@ -20,7 +20,7 @@ console.log("outside")
 app.use(express.json());
 app.use(async (req, res, next) => {
     try {
-        console.log(process.env.API_DB)
+        console.log(process.env.API_DB);
         await connectDB();   
         next();
     } catch (err) {

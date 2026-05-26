@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const db = mongoose.connect(process.env.API_DB)
+const connectDB = mongoose.connect(process.env.API_DB)
     .then(() => {
         console.log("db connected");
     })
