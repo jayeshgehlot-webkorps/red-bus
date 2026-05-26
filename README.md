@@ -154,6 +154,8 @@ npm run dev
 5. Backend sends booking list to frontend  
 6. Frontend displays all bookings to the user  
 
+<img width="1901" height="1080" alt="image" src="https://github.com/user-attachments/assets/a2095bbc-83f9-4f1d-8dc2-86bc8e1441b0" />
+
 ---
 
 ### ❌ Cancel Booking (Flow)
@@ -179,6 +181,8 @@ npm run dev
    - All bookings  
 4. Backend sends dashboard data to frontend  
 5. Frontend displays overview of buses and bookings  
+
+<img width="1893" height="1080" alt="image" src="https://github.com/user-attachments/assets/e2676488-8ac2-46b1-a676-2702b2e38733" />
 
 ---
 
@@ -222,6 +226,8 @@ npm run dev
 5. Backend updates user role in database  
 6. Backend sends confirmation response  
 7. Frontend updates user list with new roles  
+
+<img width="1897" height="847" alt="image" src="https://github.com/user-attachments/assets/194e750e-941a-4b86-8c95-51e66a9fbfd4" />
 
 ---
 
@@ -319,20 +325,10 @@ npm run dev
 Login 
 <img width="1920" height="812" alt="image" src="https://github.com/user-attachments/assets/7617cda7-8601-4ae8-b29d-91acb22f8195" />
 
-Home page
-<img width="1892" height="1080" alt="image" src="https://github.com/user-attachments/assets/d081536f-2af0-4751-bcb9-e5482fd3642b" />
-
-My Bookings 
-<img width="1901" height="1080" alt="image" src="https://github.com/user-attachments/assets/a2095bbc-83f9-4f1d-8dc2-86bc8e1441b0" />
-
-Add New Bus
-<img width="1893" height="1080" alt="image" src="https://github.com/user-attachments/assets/e2676488-8ac2-46b1-a676-2702b2e38733" />
 
 Remove Bus
 <img width="1898" height="1080" alt="image" src="https://github.com/user-attachments/assets/585f82d3-23f3-4785-8b81-4c49706346f6" />
 
-Make Admin
-<img width="1897" height="847" alt="image" src="https://github.com/user-attachments/assets/194e750e-941a-4b86-8c95-51e66a9fbfd4" />
 
 Remove Admin
 <img width="1901" height="790" alt="image" src="https://github.com/user-attachments/assets/fb67d224-0c53-453c-a1c3-dea09af9f383" />
